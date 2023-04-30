@@ -1,10 +1,17 @@
+li {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+
 .meal {
   display: flex;
   justify-content: space-between;
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
   flex-direction: column;
+  width: 50%;
 }
 
 .meal h3 {
@@ -24,4 +31,11 @@
   color: #ad5502;
   font-size: 1.25rem;
   display: block;
+}
+
+.meal-item-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: right;
 }

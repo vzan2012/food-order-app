@@ -1,5 +1,9 @@
 .form {
   text-align: right;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
 
 .form button {
@@ -11,6 +15,7 @@
   padding: 0.25rem 2rem;
   border-radius: 20px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .form button:hover,
