@@ -25,3 +25,6 @@ dist-ssr
 
 # Code Workspace
 *.code-workspace
+
+# Env Files
+.env
