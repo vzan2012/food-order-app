@@ -1,0 +1,17 @@
+.control {
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.control label {
+  float: left;
+  text-align: right;
+  width: 30%;
+  margin-right: 10px;
+}
+
+.control input {
+  border: 1px solid #ccc;
+  float: left;
+}
