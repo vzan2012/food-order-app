@@ -4,7 +4,7 @@ import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import { useEffect, useState } from "react";
 
-// Fe
+// Fetch Meals Data from the Firebase
 const mealsURL = `${import.meta.env.VITE_FIREBASE_URL}/meals.json`;
 
 const AvailableMeals = () => {

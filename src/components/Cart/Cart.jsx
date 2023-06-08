@@ -5,6 +5,8 @@ import CartContext from "../../store/cart-context";
 import CartItem from "./CartItem";
 import Checkout from "./Checkout";
 
+const mealsOrderURL = `${import.meta.env.VITE_FIREBASE_URL}/orders.json`;
+
 const Cart = (props) => {
   const [isCheckout, setIsCheckout] = useState(false);
 
@@ -39,6 +41,18 @@ const Cart = (props) => {
     </div>
   );
 
+  const submitOrderHandler = (userData) => {
+    console.log(userData);
+
+    fetch(mealsOrderURL, {
+      method: "POST",
+      body: JSON.stringify({
+        user: userData,
+        orderedItems: cartCtx.items,
+      }),
+    });
+  };
+
   const cartItems = (
     <ul className={classes["cart-items"]}>
       {cartCtx.items.map((item) => (
@@ -64,7 +78,9 @@ const Cart = (props) => {
       </div>
 
       {/* Checkout Form  */}
-      {isCheckout && <Checkout onCancel={props.onHideCart} />}
+      {isCheckout && (
+        <Checkout onConfirm={submitOrderHandler} onCancel={props.onHideCart} />
+      )}
 
       {!isCheckout && modalActions}
     </Modal>
